@@ -1,39 +1,39 @@
-#include <stdlib.h>
+#include "libft.h"
 #include <stdio.h>
-#include <unistd.h>
 
 size_t ft_strlen(const char *s)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while(s[i])
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while(s[i])
+		i++;
+	return (i);
 }
-
-char *ft_substr(char const *s, unsigned int start,size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t i;
-    size_t j;
-    char *ptr;
+	size_t i;
+	size_t j;
+	char *ptr;
 
-    i = start;
-    j = 0;
-    ptr = malloc(len);
-    while(j < len)
-    {
-        ptr[j] == s[i];
-        i++;
-        j++;
-    }
-    ptr[i] = '\0';
-    return (ptr);
+	i = 0;
+	j = start;
+	ptr = malloc(len + 1);
+	if(ft_strlen(s) < start + len)
+	{
+		return (NULL);
+	}
+	while(i < len)
+	{
+		ptr[i] = s[j];
+		j++;
+		i++;
+	}
+	ptr[i] = '\0';
+	return(ptr);
 }
 
 int main()
 {
-    printf("%s\n", ft_substr("Hello", 1, 4));
+	printf("%s", ft_substr("hello world", 10, 1));
 }
