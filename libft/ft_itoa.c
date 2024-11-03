@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 05:09:09 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 03:00:46 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:02:04 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,13 @@ int ft_count(int num)
 }
 char *ft_itoa(int n)
 {
-    int i;
 	char			*str;
 	int				len;
 	unsigned int	nbr;
 
-    i = 0;
 	len = ft_count(n);
 	str = (char *)malloc(sizeof(char) * len + 1);
-	if (str[i])
+	if (!str)
 		return (NULL);
 	str[len] = '\0';
 	nbr = n;
@@ -49,11 +47,11 @@ char *ft_itoa(int n)
         len--;
 	}
 	if (n < 0)
-		str[i] = '-';
+		str[0] = '-';
 	return (str);
 }
 
 int main()
 {
-    printf("%s", ft_itoa(-3156));
+    printf("%s", ft_itoa(2147483647));
 }

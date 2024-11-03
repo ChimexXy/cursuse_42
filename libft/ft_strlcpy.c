@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:30:12 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/25 13:01:52 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:18:11 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,9 @@ size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
     while (src[i])
         i++;
     return (i);
+}
+
+int main()
+{
+    
 }

@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 07:57:02 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:53:44 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:06:08 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,10 @@ char *ft_strtrim(char const *s1, char const *set)
     j = check_end(s1, set);
 	k = 0;
 	ptr = malloc(ft_strlen(s1) - (ft_strlen(set) * 2));
-    
+    if (s1 == set)
+        return ("");
+    if (!s1 || !set)
+        return (NULL);
     while(s1[i] && i < j)
 	{
         ptr[k] = s1[i];
@@ -81,5 +84,5 @@ char *ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-	printf("%s\n", ft_strtrim("ABC", "ABC"));
+	printf("%s\n", ft_strtrim("ABCdsfABC", "ABC"));
 }

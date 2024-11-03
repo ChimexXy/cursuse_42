@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-Ar= ar rcs
-SRC = main.c
+Ar= ar rc
+SRC = main.c ft_strlcat.c 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
 

@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 03:02:49 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 03:03:57 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:07:54 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_putstr_fd(char *s, int fd)
     i = 0;
     while(s[i])
     {
-        write(fd, s[i], 1);
+        write(fd, &s[i], 1);
         i++;
     }
 }

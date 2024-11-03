@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:05:48 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/26 15:57:31 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 11:57:58 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int ft_atoi(const char *str)
 #include <string.h>
 int main()
 {
-    printf("%d", ft_atoi("-55da342"));
-    printf("%d", atoi("-55da"));
+    printf("%d\n", ft_atoi(NULL));
+    printf("%d", atoi(NULL));
 }
