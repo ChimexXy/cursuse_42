@@ -15,5 +15,5 @@
 
 int main()
 {
-    printf("%d", ft_atoi("-1234"));
+    printf("%lu", sizeof(char ));
 }

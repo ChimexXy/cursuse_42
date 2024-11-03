@@ -1,17 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/01 05:09:34 by mozahnou          #+#    #+#             */
+/*   Updated: 2024/11/02 04:35:25 by mozahnou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
-
-size_t ft_strlen(char const *str)
-{
-    size_t i;
-
-    i = 0;
-    while(str[i])
-    {
-        i++;
-    }
-    return (i);
-}
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
