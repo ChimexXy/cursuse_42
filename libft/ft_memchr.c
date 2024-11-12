@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:46:42 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/27 17:53:00 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:51:08 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,19 @@
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
+	size_t i;
     unsigned char   *s1;
     unsigned char   s2;
 
+	i = 0;
     s1 = (unsigned char *)s;
     s2 = (unsigned char)c;
     while (n > 0)
     {
-        if (*s1 == s2)
-            return (s1);
+        if (s1[i] == s2)
+            return (s1 + i);
         s1++;
         n--;
     }
     return (NULL);
-}
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-    printf("%s\n", ft_memchr("Hello, World!", 'o', 16));
-    printf("%s\n", memchr("Hello, World!", 'o', 16));
 }

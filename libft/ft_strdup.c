@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:08:34 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 04:36:44 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/06 00:18:19 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,13 @@ char *ft_strdup(const char *s1)
 
 	i = 0;
 	ptr = malloc(ft_strlen(s1) + 1);
+    if(!ptr)
+        return(NULL);
 	while(s1[i])
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
+    ptr[i] = '\0';
 	return (ptr);
-}
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	printf("%s\n", strdup("hello"));
-	printf("%s", ft_strdup("hello"));
 }

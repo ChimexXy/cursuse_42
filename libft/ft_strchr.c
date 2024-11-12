@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:51:38 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/03 12:13:11 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:49:21 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,17 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int i;
+    char *ptr;
 
 	i = 0;
-    if(c == 0)
-        return (NULL);
+    ptr = (char *)s;
 	while (s[i])
 	{
 		if (s[i] == c)
-			return ((char *)s + i);
+			return (ptr + i);
 		i++;
 	}
-	return ((char *)s);
-}
-
-int main()
-{
-    printf("%s", ft_strchr("network", 116));
+    if (s[i] == c)
+        return (ptr + i);
+	return (NULL);
 }

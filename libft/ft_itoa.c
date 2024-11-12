@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 05:09:09 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/03 14:02:04 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/06 00:12:29 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char *ft_itoa(int n)
 	unsigned int	nbr;
 
 	len = ft_count(n);
-	str = (char *)malloc(sizeof(char) * len + 1);
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
@@ -49,9 +49,4 @@ char *ft_itoa(int n)
 	if (n < 0)
 		str[0] = '-';
 	return (str);
-}
-
-int main()
-{
-    printf("%s", ft_itoa(2147483647));
 }

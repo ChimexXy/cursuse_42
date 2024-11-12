@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 03:04:51 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 03:05:54 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:59:11 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_putendl_fd(char *s, int fd)
     i = 0;
     while(s[i])
     {
-        write(fd, s[i], 1);
+        write(fd, &s[i], 1);
         i++;
     }
     write(fd, "\n", 1);

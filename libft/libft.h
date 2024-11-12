@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 07:57:37 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 07:07:00 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/08 04:18:24 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ t_list *ft_lstnew(void *content);
 void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *lst, void (*del)(void*));
 void ft_lstclear(t_list **lst, void (*del)(void*));
-void ft_lstiter(t_list *lst, void (*f)(void *));
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int ft_lstsize(t_list *lst);
 t_list *ft_lstlast(t_list *lst);
 

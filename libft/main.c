@@ -6,16 +6,29 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:19:25 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/03 12:51:08 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/12 00:48:18 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <string.h>
+
+// int main()
+// {
+// 	printf("%s", memcpy("hello", "moad", 11));
+// 	printf("%s", ft_memcpy("hello", "moad", 11));
+// }
 
 int main()
 {
-    char dest[] = "network";
-	char src[] = "socity";
-    printf("%zu\n", ft_strlcat(dest, src, 0));
+    char s[] = "hello,,world,,babedsd,sss";
+    char c = ',';
+    char **ret = ft_split(s , c);
+    int i = 0;
+    while(i < 4)
+    {
+        printf("%s\n", ret[i]);
+        i++;
+    }
+
 }

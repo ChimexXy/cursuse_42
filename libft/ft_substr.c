@@ -6,32 +6,60 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 07:56:58 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 04:36:20 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:38:56 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	size_t j;
+	unsigned int i;
 	char *ptr;
 
 	i = 0;
-	j = start;
+	if(!s)
+		return(NULL);
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	if(ft_strlen(s) <= start)
+		len = 0;
 	ptr = malloc(len + 1);
-	if(ft_strlen(s) < start + len)
-	{
+	if (!ptr)
 		return (NULL);
-	}
 	while(i < len)
 	{
-		ptr[i] = s[j];
-		j++;
+		ptr[i] = s[start];
+		start++;
 		i++;
 	}
 	ptr[i] = '\0';
 	return(ptr);
 }
+
+// {
+// 	unsigned int	i;
+// 	size_t			slen;
+// 	char			*ptr;
+
+// 	i = 0;
+// 	if (!s)
+// 		return (NULL);
+// 	slen = ft_strlen(s);
+// 	if (len > slen - start)
+// 	{
+// 		len = slen - start;
+// 	}
+// 	if (start > slen)
+// 		len = 0;
+// 	ptr = malloc(1 * len + 1);
+// 	if (ptr == NULL)
+// 		return (NULL);
+// 	while (i < len && s[start + i])
+// 	{
+// 		ptr[i] = s[i + start];
+// 		i++;
+// 	}
+// 	ptr[i] = '\0';
+// 	return (ptr);
+// }

@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:38:09 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/02 03:17:24 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/08 09:49:53 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,30 @@
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dhld;
-	char	*shld;
+	char	*dest;
+	char	*srce;
 	size_t	i;
 
 	i = 0;
-	dhld = (char *)dst;
-	shld = (char *)src;
+	dest = (char *)dst;
+	srce = (char *)src;
 	if (dst == src)
 		return (dst);
-	if (dhld > shld)
+	if (dest > srce)
+    {
 		while (len > 0)
         {
-            dhld[len] = shld[len];
             len--;
-        }		
+            dest[len] = srce[len];
+        }
+    }
 	else
 	{
 		while (i < len)
 		{
-			dhld[i] = shld[i];
+			dest[i] = srce[i];
 			i++;
 		}
 	}
-	return (dst);
+	return (dest);
 }

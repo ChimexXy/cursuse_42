@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 03:06:58 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/03 12:07:20 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:47:02 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-	{
         ft_putstr_fd("-2147483648", fd);
-	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
@@ -31,9 +29,4 @@ void ft_putnbr_fd(int n, int fd)
 	}
 	else
 		ft_putchar_fd(n + 48, fd);
-}
-
-int main()
-{
-    ft_putnbr_fd(123, 1);
 }
