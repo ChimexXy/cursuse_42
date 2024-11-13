@@ -6,13 +6,13 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:36:18 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/08 09:31:02 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 05:01:27 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	size_t	j;
@@ -33,4 +33,4 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		n--;
 	}
 	return (dst);
-}    
+}

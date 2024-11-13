@@ -6,13 +6,15 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:28:51 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/23 22:29:46 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:58:31 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

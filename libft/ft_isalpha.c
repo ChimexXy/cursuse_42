@@ -6,13 +6,15 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:25:40 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/05 12:49:22 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:58:05 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) 
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) 
 		return (1);
 	return (0);
 }

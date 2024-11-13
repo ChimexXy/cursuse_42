@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 07:57:02 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/11 18:42:32 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 05:09:45 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	k;
 	char	*ptr;
 
-	if (!s1 || !set)
+	if (*s1 == '\0')
 		return (ft_strdup(""));
+	if (!s1 || !set)
+		return (NULL);
 	i = check_start(s1, set);
 	j = check_end(s1, set);
-	k = 0;
+	if (j <= i)
+		return (ft_strdup(""));
 	ptr = malloc(j - i + 1);
-	if(ft_strncmp(s1, set, 0) || !ptr)
+	if (!ptr)
 		return (NULL);
-	if (s1 == set)
-		return ("\0");
-	while (s1[i] && i < j)
+	k = 0;
+	while (i < j)
 	{
 		ptr[k] = s1[i];
 		i++;
@@ -73,3 +75,28 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[k] = '\0';
 	return (ptr);
 }
+
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+// 	size_t	i;
+// 	size_t	j;
+// 	size_t	k;
+// 	char	*ptr;
+
+// 	if (!s1 || !set)
+// 		return (ft_strdup(""));
+// 	i = check_start(s1, set);
+// 	j = check_end(s1, set);
+// 	k = 0;
+// 	ptr = malloc(j - i + 1);
+// 	if(ft_strncmp(s1, set, 0) || !ptr)
+// 		return (NULL);
+// 	while (s1[i] && i < j)
+// 	{
+// 		ptr[k] = s1[i];
+// 		i++;
+// 		k++;
+// 	}
+// 	ptr[k] = '\0';
+// 	return (ptr);
+// }

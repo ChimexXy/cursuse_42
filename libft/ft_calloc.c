@@ -6,15 +6,15 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:51:07 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/12 02:46:01 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:57:36 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char *s;
+	unsigned char	*s;
 
 	s = malloc(count * size);
 	if (!s)
@@ -22,15 +22,3 @@ void    *ft_calloc(size_t count, size_t size)
 	ft_bzero(s, count * size);
 	return (s);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char *f;
-// 	f = calloc(5, 3);
-// 	printf("ss ===== %p\n", f[7]);
-// 	f = ft_calloc(5, 3);
-// 	printf("%p", f[7]);
-// 	return 0;
-// }

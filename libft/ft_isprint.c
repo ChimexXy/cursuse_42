@@ -6,13 +6,13 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:40:58 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/23 22:43:13 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:58:43 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

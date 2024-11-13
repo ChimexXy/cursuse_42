@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 07:56:44 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/11 18:37:33 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 05:04:22 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	**ft_free_arr(char **arr, int i)
 	return (NULL);
 }
 
-size_t	ft_count_word(char const *str, char c)
+static size_t	ft_count_word(char const *str, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -42,7 +42,7 @@ size_t	ft_count_word(char const *str, char c)
 	return (j);
 }
 
-static	char	**ft_alloc_words(char **string, char const *s, char c, size_t words)
+static char	**ft_alloc_words(char **string, char const *s, char c, size_t words)
 {
 	size_t	i;
 	size_t	j;

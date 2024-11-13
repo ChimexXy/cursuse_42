@@ -6,13 +6,15 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:32:28 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/10/23 22:33:48 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 04:58:34 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

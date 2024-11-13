@@ -6,13 +6,15 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:50:31 by mozahnou          #+#    #+#             */
-/*   Updated: 2024/11/05 16:38:36 by mozahnou         ###   ########.fr       */
+/*   Updated: 2024/11/13 05:10:42 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
-	return(c);
+	return (c);
 }
